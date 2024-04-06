@@ -358,7 +358,7 @@ class App:
                 logger.info(f"IP:{self.getIP()} ---- Scroll to endof page at {href}...")
                 if task["class_name"] != "":
                     cl = task["class_name"]
-                    elements = driver.find_elements(By.XPATH,f"//*[contains(@class,'{cl}'])")
+                    elements = driver.find_elements(By.XPATH,f"{cl}")
                     for e in elements:
                         e.click()
                         logger.info(f"IP:{self.getIP()} ---- Click on element with class {cl} at {href}...")
